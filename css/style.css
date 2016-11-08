@@ -1,0 +1,253 @@
+@charset "UTF-8";
+/* line 9, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+html {
+  font-family: 'Raleway', sans-serif;
+  font-size: 15px; }
+
+/* line 14, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+body {
+  margin: 0;
+  background-color: #C6C8CA; }
+
+/* line 19, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+h1, h2, h3 {
+  font-family: 'Lobster', cursive; }
+
+/* line 23, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+a {
+  color: inherit;
+  text-decoration: inherit; }
+
+/* line 28, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+header {
+  width: 100%; }
+  /* line 33, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  header nav .first-row {
+    color: white;
+    font-family: 'Lobster', cursive;
+    background: #111111;
+    height: 4.4em;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between; }
+    /* line 44, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    header nav .first-row i {
+      font-size: 3em;
+      margin: auto 0px;
+      cursor: pointer; }
+    /* line 50, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    header nav .first-row .site-title {
+      font-size: 3em;
+      margin: auto;
+      font-weight: 200;
+      animation: 10s infinite colorchange; }
+
+@keyframes colorchange {
+  0% {
+    color: #FFFFFF; }
+  33% {
+    color: #FFD034; }
+  66% {
+    color: #FF4C3B; }
+  100% {
+    color: #FFFFFF; } }
+    /* line 72, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    header nav .first-row .site-title:hover {
+      color: #FFD034; }
+    /* line 76, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    header nav .first-row .site-title:active {
+      color: #FF4C3B; }
+
+/* line 83, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+.sidenav {
+  display: none;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 4.4em;
+  background: rgba(0, 0, 0, 0.4); }
+  /* line 91, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  .sidenav ul {
+    width: 300px;
+    background: #2b2b2b;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+    color: #FFFFFF; }
+    /* line 99, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    .sidenav ul li {
+      cursor: pointer; }
+      /* line 102, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+      .sidenav ul li a {
+        font-size: 1.3em;
+        padding: 1em;
+        display: block; }
+    /* line 109, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    .sidenav ul li:hover {
+      background: #FFD034;
+      color: #111111;
+      font-weight: bold; }
+    /* line 115, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    .sidenav ul li:active {
+      background: #FF4C3B; }
+
+/* line 121, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+main {
+  width: 90%;
+  margin: 0 auto; }
+  /* line 125, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main h1, main h2 {
+    text-align: center;
+    font-size: 2.5em; }
+  /* line 130, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main h2::before, main h1::before {
+    content: "<- "; }
+  /* line 133, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main h2::after, main h1::after {
+    content: " ->"; }
+  /* line 137, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main .debate {
+    font-family: 'Courgette', cursive;
+    font-size: 3em;
+    max-width: 80%;
+    margin: auto;
+    border-radius: .5em;
+    padding: 1em;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 2px 0 rgba(0, 0, 0, 0.75);
+    margin-bottom: 1em;
+    text-align: center; }
+    /* line 149, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    main .debate strong {
+      color: #FF4C3B;
+      text-decoration: underline; }
+  /* line 155, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main .debate::before {
+    content: "«"; }
+  /* line 158, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main .debate::after {
+    content: "»"; }
+  /* line 162, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main .comments {
+    margin-bottom: 1.5em;
+    overflow: hidden; }
+    /* line 166, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    main .comments .comment {
+      width: 60%;
+      background: #FFFFFF;
+      padding: 0 1em;
+      padding-bottom: .7em;
+      text-align: justify;
+      margin-bottom: 1em;
+      float: left;
+      font-size: 1.5em;
+      border-radius: 10px 10px 0px 10px; }
+      /* line 177, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+      main .comments .comment .details {
+        width: 100%;
+        padding-top: .2em; }
+        /* line 181, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+        main .comments .comment .details .author, main .comments .comment .details .date {
+          display: inline-block;
+          color: #FF4C3B; }
+        /* line 186, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+        main .comments .comment .details .author {
+          width: 55%;
+          font-weight: bold;
+          font-size: .9em; }
+        /* line 192, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+        main .comments .comment .details .author:hover {
+          text-decoration: underline; }
+        /* line 196, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+        main .comments .comment .details .date {
+          width: 40%;
+          font-size: .7em;
+          text-align: right; }
+    /* line 204, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    main .comments .comment.right {
+      float: right;
+      background: #FF4C3B;
+      color: white;
+      border-radius: 10px 10px 10px 0px; }
+      /* line 214, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+      main .comments .comment.right .details .author, main .comments .comment.right .details .date {
+        color: #111111; }
+  /* line 222, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main .add-comment textarea {
+    width: 100%;
+    min-height: 5em;
+    outline: none;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.2em;
+    resize: vertical;
+    border-radius: 8px; }
+  /* line 232, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main .add-comment button {
+    background: #FFD034;
+    /* Green */
+    border: none;
+    padding: 1em 2em;
+    text-align: center;
+    display: block;
+    font-size: 1em;
+    font-weight: bold;
+    margin: 1em auto 2em;
+    cursor: pointer; }
+  /* line 244, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main .add-comment button:hover {
+    background: #111111;
+    color: #FFD034; }
+  /* line 249, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  main .add-comment button:active {
+    background: #515151; }
+
+/* line 255, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+footer {
+  width: 100%;
+  height: 4em;
+  color: white;
+  background-color: #2b2b2b; }
+  /* line 261, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+  footer .first-row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    height: 4em; }
+    /* line 267, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    footer .first-row .copyright, footer .first-row .item {
+      font-family: 'Lobster', cursive;
+      font-size: 2em;
+      line-height: 2em; }
+    /* line 273, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    footer .first-row .item {
+      cursor: pointer;
+      display: block;
+      color: #FFD034; }
+    /* line 279, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+    footer .first-row .item:hover {
+      color: #FF4C3B; }
+
+/* line 286, C:/Users/arnaud.plumez/Documents/Lets Debate/css/style.scss */
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }
+
+/*# sourceMappingURL=style.css.map */

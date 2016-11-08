@@ -1,0 +1,309 @@
+$nav-height: 4em;
+$rouge: #FF4C3B;
+$bleu: #0072BB;
+$jaune: #FFD034;
+$noir: #111111;
+$gris: #C6C8CA;
+$blanc: #FFFFFF;
+
+html {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+
+body {
+    margin: 0;
+    background-color: $gris;
+}
+
+h1, h2, h3 {
+    font-family: 'Lobster', cursive;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+header {
+    width: 100%;
+    
+    nav {
+        
+        .first-row {
+            color: white;
+            font-family: 'Lobster', cursive;
+            background: $noir;
+            $first-row-height: 1.1 * $nav-height;
+            height: $first-row-height;
+            
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            
+            i {
+                font-size: 3em;
+                margin: auto 0px;
+                cursor: pointer;
+            }
+            
+            .site-title {
+                font-size: 3em;
+                margin: auto;
+                font-weight: 200;
+                animation: 10s infinite colorchange;
+            }
+            
+            @keyframes colorchange {
+                0% {
+                    color: $blanc;
+                }
+                33% {
+                    color: $jaune;
+                }
+                66% {
+                    color: $rouge;
+                }
+                100% {
+                    color: $blanc;
+                }
+            }
+            
+            .site-title:hover {
+                color: $jaune;
+            }
+            
+            .site-title:active {
+                color: $rouge;
+            }
+        }
+    }
+}
+
+.sidenav {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 1.1 * $nav-height; //nav first row height
+    background: rgba(0, 0, 0, 0.4);
+    
+    ul {
+        width: 300px;
+        background: lighten($noir, 10%);
+        padding: 0;
+        list-style-type: none;
+        margin: 0;
+        color: $blanc;
+        
+        li {
+            cursor: pointer;
+            
+            a {
+                font-size: 1.3em;
+                padding: 1em;
+                display: block;
+            }
+        }
+        
+        li:hover {
+            background: $jaune;
+            color: $noir;
+            font-weight: bold;
+        }
+        
+        li:active {
+            background: $rouge;
+        }
+    }
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    
+    h1, h2 {
+        text-align: center;
+        font-size: 2.5em;
+    }
+    
+    h2::before, h1::before {
+        content: "<- ";
+    }
+    h2::after, h1::after {
+        content: " ->";
+    }
+    
+    .debate {
+        font-family: 'Courgette', cursive;
+        font-size: 3em;
+        max-width: 80%;
+        margin: auto;
+        border-radius: .5em;
+        padding: 1em;
+        background-color: $blanc;
+        box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.75);
+        margin-bottom: 1em;
+        text-align: center;
+        
+        strong {
+            color: $rouge;
+            text-decoration: underline;
+        }
+    }
+    
+    .debate::before {
+        content: "«";
+    }
+    .debate::after {
+        content: "»";
+    }
+    
+    .comments {
+        margin-bottom: 1.5em;
+        overflow: hidden; //Adapte la hauteur de la div aux float inside
+        
+        .comment {
+            width: 60%;
+            background: $blanc;
+            padding: 0 1em;
+            padding-bottom: .7em;
+            text-align: justify;
+            margin-bottom: 1em;
+            float: left;
+            font-size: 1.5em;
+            border-radius: 10px 10px 0px 10px;
+            
+            .details {
+                width: 100%;
+                padding-top: .2em;
+                
+                .author, .date {
+                    display: inline-block;
+                    color: $rouge;
+                }
+
+                .author {
+                    width: 55%;
+                    font-weight: bold;
+                    font-size: .9em;
+                }
+                
+                .author:hover {
+                    text-decoration: underline;
+                }
+
+                .date {
+                    width: 40%;
+                    font-size: .7em;
+                    text-align: right;
+                }
+            }
+        }
+
+        .comment.right {
+            float: right;
+            background: $rouge;
+            color: white;
+            
+            border-radius: 10px 10px 10px 0px;
+            
+            
+            
+            .details {                
+                .author, .date {
+                    color: $noir;
+                }
+            }
+        }
+    }
+
+    .add-comment {
+        textarea {
+            width: 100%;
+            min-height: 5em;
+            outline: none;
+            font-family: 'Raleway', sans-serif;
+            font-size: 1.2em;
+            resize: vertical;
+            border-radius: 8px;
+        }
+        
+        button {
+            background: $jaune; /* Green */
+            border: none;
+            padding: 1em 2em;
+            text-align: center;
+            display: block;
+            font-size: 1em;
+            font-weight: bold;
+            margin: 1em auto 2em;
+            cursor: pointer;
+        }
+        
+        button:hover {
+            background: $noir;
+            color: $jaune;
+        }
+        
+        button:active {
+            background: lighten($noir, 25%);
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: 4em;
+    color: white;
+    background-color: lighten($noir, 10%);
+    
+    .first-row {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        height: 4em;
+        
+        .copyright, .item {
+            font-family: 'Lobster', cursive;
+            font-size: 2em;
+            line-height: 2em;
+        }
+        
+        .item {
+            cursor: pointer;
+            display: block;
+            color: $jaune;            
+        }
+        
+        .item:hover {
+            color: $rouge;
+        }
+    }
+    
+}
+
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+}

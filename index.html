@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Let's debate!</title>
+    <meta name="description" content="Website made to discuss with others about everything and nothing.">
+    <meta name="author" content="Arnaud Pl">
+    <meta name="keywords" content="debate discuss discussion ideas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Raleway|Courgette" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    
+</head>
+
+<body>
+	 
+    <header>
+        <nav>
+            <div class="first-row">
+                <i class="material-icons" onclick="toggleMenu();">menu</i>
+                <a href="index.html">
+                    <h1 class="site-title">
+                        Let's debate!
+                    </h1>
+                </a>
+                <span class="empty-for-align"></span>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="sidenav" onclick="toggleMenu();">
+        <ul>
+            <li><a href="#">Debate of the week</a></li>
+            <li><a href="#">How is this site working ?</a></li>
+            <li><a href="#">Rejoin us to participate !</a></li>
+            <li><a href="#">About the website</a></li>
+            <li><a href="#">Ask us anything !</a></li>
+        </ul>
+    </div>
+    
+    <main>
+        <h1>Debate of the week</h1>
+        <div class="debate">We will <strong>never</strong> be able to travel at light speed.
+        </div>
+        
+        
+        <h2>Write your opinion !</h2>
+        <div class="add-comment">
+            <textarea placeholder="What is on your mind ?" autofocus></textarea>
+            <button>Share it !</button>
+        </div>
+        
+        <h1>What do people think about it ?</h1>
+        <div class="comments">
+            <div class="comment left">
+                <div class="details">
+                    <a href="#">
+                        <span class="author">
+                            Kartläggning
+                        </span>
+                    </a>
+                    <div class="date">
+                        Monday, 18:00
+                    </div>
+                </div>
+                I think that this is totally false... ! This cannot be real.
+            </div>
+            
+            <div class="comment right">
+                <div class="details">
+                    <a href="#">
+                        <span class="author">
+                            Techknow
+                        </span>
+                    </a>
+                    <div class="date">
+                        Wednesday, 06:00
+                    </div>
+                </div>
+                You don't even know what is lightspeed, Kart. So stfu and let the smart guys talk together.
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="first-row">
+            <div class="copyright">
+                © 2016 Arnaud Pl.
+            </div>
+            <a href="#">
+                <span class="item">
+                    Contact
+                </span>
+            </a>
+            <a href="#">
+                <span class="item">
+                    About
+                </span>
+            </a>
+        </div>
+    </footer>
+    
+    <script>
+    function toggleMenu() {
+        if ($('.sidenav').css('display') === 'none') {
+            $(".sidenav").show();
+            $('body').css('height', '100%');
+            $('body').css('overflow', 'hidden');
+        } else {
+            $(".sidenav").hide();
+            $('body').css('height', 'auto');
+            $('body').css('overflow', 'auto');
+        }
+    };
+    </script>
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</body>
+</html>
